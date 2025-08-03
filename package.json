@@ -1,0 +1,20 @@
+{
+  "name": "xnose-app",
+  "version": "1.0.0",
+  "description": "Aplicación móvil con backend conectado a Google Cloud",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run mobile\"",
+    "server": "cd backend && npm start",
+    "mobile": "cd mobile && npm start",
+    "build:android": "cd mobile && npm run android",
+    "build:ios": "cd mobile && npm run ios",
+    "deploy": "cd backend && npm run deploy"
+  },
+  "keywords": ["react-native", "google-cloud", "mobile-app"],
+  "author": "Leonardo",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+} 
